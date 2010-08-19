@@ -1,0 +1,3 @@
+This is a simple HTML/Javascript based presentation tool.  
+
+Create slides as divs in HTML w/ id = 'num'+number
