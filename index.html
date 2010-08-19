@@ -10,22 +10,23 @@
             body { background-color: #000; font-family: 'Cantarell', serif; color: #fff; }
             cursor { color: green; }
             h1,h2,h3,h4,h5,h6 { margin: 5px 0; }
-            h1 { font-size: 72px; margin: 10px 0;}
+            h1 { font-size: 64px; margin: 10px 0;}
             h2 { font-size: 54px; margin: 8px 0;}
             h2 { font-size: 36px; }
             hr { display: none }
             p { width: 60%; font-size: 28px; margin: 0 auto; text-align: justify;}
             .call { color: #fc0; }
             table { width: 100%; }
-            td { height: 40em; width: 100%; vertical-align: middle; text-align: center; }
+            td { height: 20em; width: 100%; vertical-align: middle; text-align: center; }
             ul { #ddd; text-align: left; width: 10%; margin: 0 auto;}
             li { font-size: 36px; list-style-position: outside; padding: 0 10px;}
             div.hide { display: none; }
+            p.notes { display: none; }
         </style>
     </head>
     <body>
         <div id="container">
-            <table><tr><td>
+            <table><tr><td id="viewport">
 
                         <!--  SLIDES GO HERE -->
 
@@ -33,6 +34,10 @@
                             <h1>The Title of My Presentation</h1>
                             <h2>My name Here</h2>
                         </div>
+
+                        <p class="notes">[
+                        Here are notes about the slide.  You can view these by turning off page styles.
+                        ]</p>
 
                         <hr>
 
@@ -68,7 +73,7 @@
                             <h4>with a picture</h4>
                             <img src="http://lh3.ggpht.com/_wyfsTFebus0/TF9c7STm_JI/AAAAAAAAjjI/nNOikWf15rI/s400/New%20Photo.jpg" />
                         </div>
-                        
+
                         <hr>
 
             </td></tr></table>
@@ -76,16 +81,19 @@
         </div>
     </body>
     <script>
+        function $(id) { return document.getElementById(id); }
+        h = window.innerHeight-40;
+        $('viewport').style.height = h+"px";
         var current = 1;
         var tbl = document.getElementsByTagName('table')[0];
         var number_of_slides = tbl.getElementsByTagName('div').length;
         function indicate(current) {
-            var gutter = document.getElementById('gutter')
+            var gutter = $('gutter')
             gutter.innerHTML = current+' of '+number_of_slides;
         }
         indicate(current);
         document.onkeyup = function(e) {
-            var curr_slide = document.getElementById('num'+current);
+            var curr_slide = $('num'+current);
             if (curr_slide) {
                 curr_slide.className = 'hide';
             }
@@ -108,7 +116,7 @@
             }
             if (current < 1) { current = 1; }
             if (current > number_of_slides) { current = number_of_slides; }
-            var next_slide = document.getElementById('num'+current);
+            var next_slide = $('num'+current);
             if (next_slide) {
                 next_slide.className = '';
             }
