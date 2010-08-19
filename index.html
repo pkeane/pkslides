@@ -89,6 +89,10 @@
             if (83 == code) {
                 current = 1;
             }
+            //jump to number
+            if (code > 48 && code < 58) {
+                current = code - 48;
+            }
             if (current < 1) { current = 1; }
             if (current > number_of_slides) { current = number_of_slides; }
             var next_slide = document.getElementById('num'+current);
