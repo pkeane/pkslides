@@ -16,7 +16,7 @@
             h4 { font-size: 24px; }
             h5 { font-size: 12px; font-weight: normal; color: #ccc;}
             hr { display: none }
-            p { width: 60%; font-size: 30px; margin: 0 auto; text-align: justify;}
+            p { width: 66%; font-size: 30px; letter-spacing: 1px; margin: 0 auto; text-align: justify;}
             .call { color: #fc0; }
             table { width: 100%; }
             td { height: 20em; width: 100%; vertical-align: middle; text-align: center; }
@@ -24,7 +24,7 @@
             ul { text-align: left; margin: 0 auto; width: 42%;}
             li { font-size: 36px; list-style-position: outside; padding: 0 10px;}
             div.show { display: block; }
-			div.show p.cloud { position: absolute; }
+			div.show p.cloud { position: absolute; width: 400px;}
             p.notes { display: none; }
         </style>
     </head>
@@ -46,41 +46,32 @@
                         <hr>
 
 						<div class="cloud">
-							<h1>Buzzwords</h1>
+							<h1>Related Concepts</h1>
 							<p class="cloud" style="top: 12%; left: 60%;">systems thinking</p>
-							<p class="cloud" style="top: 20%; left: 15%;">principled design</p>
-							<p class="cloud" style="top: 60%; left: 60%;">layered architecture</p>
-							<p class="cloud" style="top: 80%; left: 10%;">loose coupling</p>
-							<p class="cloud" style="top: 35%; left: 45%;">domain-driven design</p>
+							<p class="cloud" style="top: 20%; left: 15%; color: #ef930b;">principled design</p>
+							<p class="cloud" style="top: 60%; left: 60%; color: #060;">layered architecture</p>
+							<p class="cloud" style="top: 70%; left: 10%; color: #a11; ">loose coupling</p>
+							<p class="cloud" style="top: 30%; left: 45%; color: #457;">domain-driven design</p>
 						</div>
 
-
-
-
+						<div>
+							<h1>Systems Thinking</h1>
+							<p>
+							a way of understanding a problem that emphasizes the <span
+							class="call">relationships</span> among a system's parts, rather
+							than the parts themselves. As an approach, it enables long-view
+							solutions, seeking to identify unintended consequences.
+							</p>
+						</div>
 
                         <div>
                             <h1>Horizontal Software Development</h1>
                             <p>
-                            is an approach to software development that emphasizes <span class="call">layers of functionality</span>. Layers can be built upon, reconfigured, and independently evolved to address current and emerging needs. Horizontal development operates in a <span class="call">context</span> of forces, constraints, objectives and resources. 
+			    is an approach to software development that emphasizes <span class="call">layers of
+			    functionality</span>. Layers can be built upon, reconfigured, and independently evolved to
+			address current and emerging needs. 
                             </p>
                         </div>
-                        <div >
-                            <h1>The Context</h1>
-                            <ul style="width: 18%;">
-                                <li>Forces</li>
-                                <li>Constraints</li>
-                                <li>Objectives</li>
-                                <li>Resources</li>
-                            </ul>
-                        </div>
-
-                        <p class="notes">[
-                        what, where, when, why, who, how.
-                        ]</p>
-
-
-                        <hr>
-
                         <div>
                             <h1>Horizontal Software Development</h1>
                             <p>is not a recipe, set of hard-and-fast rules, discipline, etc.  It is rather a set of principles, an approach, that can be applied in many instances and in <span class="call">many guises</span> in order to allow certain (desirable) properties to emerge.</p>
@@ -93,6 +84,7 @@
                                 <li>Separation of Concerns</li>
                                 <li>Clarity/Simplicity</li>
                                 <li>Flexibility/Evolvability</li>
+                                <li>Dependency Management</li>
                             </ul>
                         </div>
 
@@ -102,7 +94,7 @@
                         <div>
                             <p>Why is horizontal development
                             particularly difficult in libraries?
-                            Because libraries are based on a
+                            Because libraries are (historically) based on a
                             different set of assumptions & guiding
                             principles: verticality, expertise, top-down
                             order & structure, resting on 
@@ -127,9 +119,21 @@
                         <hr>
 
                         <div>
-                            <h1>The Context</h1>
+                            <img src="images/klee_viaducts.jpg" alt="Paul Klee: Revolt of the Viaducts"/>
+                            <h5>Paul Klee: Revolt of the Viaducts</h5>
+                        </div>
+                        <div>
+                            <h1>The Context of Software Development</h1>
                         </div>
 
+                        <div>
+                            <ul style="width:20%;">
+                                <li>Forces</li>
+                                <li>Constraints</li>
+                                <li>Objectives</li>
+                                <li>Resources</li>
+                            </ul>
+                        </div>
                         <div>
                             <h1>Forces</h1>
                             <img src="images/klee_separation.jpg" alt="Paul Klee: Separation in the Evening"/>
@@ -138,8 +142,12 @@
 
                         <div>
                             <h1>Constraints</h1>
+                            <img src="images/klee_constraints.jpg" alt="Paul Klee: Chess"/>
+                            <h5>Paul Klee: Chess</h5>
+							<!--
                             <img src="images/klee_viaducts.jpg" alt="Paul Klee: Revolt of the Viaducts"/>
                             <h5>Paul Klee: Revolt of the Viaducts</h5>
+							-->
                         </div>
 
                         <div>
@@ -150,6 +158,8 @@
 
                         <div>
                             <h1>Resources</h1>
+                            <img src="images/klee_resources.jpg" alt="Paul Klee: View of Kairuan"/>
+                            <h5>Paul Klee: View of Kairuan</h5>
                         </div>
 
                         <div>
@@ -171,6 +181,11 @@
                         </div>
 
                         <hr>
+
+                        <div>
+                            <img src="images/klee_twitter.jpg" alt="Paul Klee: The Twittering Machine"/>
+                            <h3>Paul Klee: The Twittering Machine</h3>
+                        </div>
 
 
             </td></tr></table>
