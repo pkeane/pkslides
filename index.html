@@ -7,22 +7,24 @@
         <link href='http://fonts.googleapis.com/css?family=Cantarell:bold' rel='stylesheet' type='text/css'>
 
         <style type="text/css">
-            body { background-color: #000; font-family: 'Cantarell', serif; color: #fff; }
+            body { background-color: #000; font-family: 'Cantarell', 'Verdana' ,sans-serif; color: #fff; }
             cursor { color: green; }
             h1,h2,h3,h4,h5,h6 { margin: 5px 0; }
             h1 { font-size: 64px; margin: 10px 0;}
             h2 { font-size: 54px; margin: 8px 0;}
             h2 { font-size: 36px; }
             h4 { font-size: 24px; }
-            h5 { font-size: 14px; }
+            h5 { font-size: 12px; font-weight: normal; color: #ccc;}
             hr { display: none }
             p { width: 60%; font-size: 30px; margin: 0 auto; text-align: justify;}
             .call { color: #fc0; }
             table { width: 100%; }
             td { height: 20em; width: 100%; vertical-align: middle; text-align: center; }
+			td div { display: none; }
             ul { text-align: left; margin: 0 auto; width: 42%;}
             li { font-size: 36px; list-style-position: outside; padding: 0 10px;}
-            div.hide { display: none; }
+            div.show { display: block; }
+			div.show p.cloud { position: absolute; }
             p.notes { display: none; }
         </style>
     </head>
@@ -32,7 +34,7 @@
 
                         <!--  SLIDES GO HERE -->
 
-                        <div id="num1">
+                        <div>
                             <h1>Horizontal Software Development</h1>
                             <h2 class="call">Peter Keane, UT Austin</h2>
                         </div>
@@ -43,13 +45,26 @@
 
                         <hr>
 
-                        <div class="hide" id="num2">
+						<div class="cloud">
+							<h1>Buzzwords</h1>
+							<p class="cloud" style="top: 12%; left: 60%;">systems thinking</p>
+							<p class="cloud" style="top: 20%; left: 15%;">principled design</p>
+							<p class="cloud" style="top: 60%; left: 60%;">layered architecture</p>
+							<p class="cloud" style="top: 80%; left: 10%;">loose coupling</p>
+							<p class="cloud" style="top: 35%; left: 45%;">domain-driven design</p>
+						</div>
+
+
+
+
+
+                        <div>
                             <h1>Horizontal Software Development</h1>
                             <p>
                             is an approach to software development that emphasizes <span class="call">layers of functionality</span>. Layers can be built upon, reconfigured, and independently evolved to address current and emerging needs. Horizontal development operates in a <span class="call">context</span> of forces, constraints, objectives and resources. 
                             </p>
                         </div>
-                        <div class="hide" id="num3">
+                        <div >
                             <h1>The Context</h1>
                             <ul style="width: 18%;">
                                 <li>Forces</li>
@@ -59,8 +74,6 @@
                             </ul>
                         </div>
 
-                        <hr>
-
                         <p class="notes">[
                         what, where, when, why, who, how.
                         ]</p>
@@ -68,13 +81,13 @@
 
                         <hr>
 
-                        <div class="hide" id="num4">
+                        <div>
                             <h1>Horizontal Software Development</h1>
                             <p>is not a recipe, set of hard-and-fast rules, discipline, etc.  It is rather a set of principles, an approach, that can be applied in many instances and in <span class="call">many guises</span> in order to allow certain (desirable) properties to emerge.</p>
                         </div>
 
                         <hr>
-                        <div class="hide" id="num5">
+                        <div>
                             <h1>Desirable Properties</h1>
                             <ul>
                                 <li>Separation of Concerns</li>
@@ -86,13 +99,13 @@
                         <hr>
 
 
-                        <div class="hide" id="num6">
+                        <div>
                             <p>Why is horizontal development
                             particularly difficult in libraries?
                             Because libraries are based on a
                             different set of assumptions & guiding
                             principles: verticality, expertise, top-down
-                            order/structure, resting on 
+                            order & structure, resting on 
                             <span class="call">unchanging</span>
                             technologies and realities.
                             </p>
@@ -105,7 +118,7 @@
 
                         <hr>
 
-                        <div class="hide" id="num7">
+                        <div>
                             <p style="text-align: left; width: 40%">Information
                             technology in general and the <span class="call">Web</span> in
                             particular changed that.</p>
@@ -113,27 +126,33 @@
 
                         <hr>
 
-                        <div class="hide" id="num8">
+                        <div>
                             <h1>The Context</h1>
                         </div>
 
-                        <div class="hide" id="num9">
+                        <div>
                             <h1>Forces</h1>
+                            <img src="images/klee_separation.jpg" alt="Paul Klee: Separation in the Evening"/>
+                            <h5>Paul Klee: Separation in the Evening</h5>
                         </div>
 
-                        <div class="hide" id="num10">
+                        <div>
                             <h1>Constraints</h1>
+                            <img src="images/klee_viaducts.jpg" alt="Paul Klee: Revolt of the Viaducts"/>
+                            <h5>Paul Klee: Revolt of the Viaducts</h5>
                         </div>
 
-                        <div class="hide" id="num11">
+                        <div>
                             <h1>Objectives</h1>
+                            <img src="images/klee_rhythm.jpg" alt="Paul Klee: Rhythmical, More Rigorous and Freer"/>
+                            <h5>Paul Klee: Rhythmical, More Rigorous and Freer</h5>
                         </div>
 
-                        <div class="hide" id="num12">
+                        <div>
                             <h1>Resources</h1>
                         </div>
 
-                        <div class="hide" id="num13">
+                        <div>
                             <h2>from "how" to "what"</h2>
                             <h2>from imperative to declarative</h2>
                             <h2>increased emphasis on "interface" or "service"</h2>
@@ -141,33 +160,18 @@
 
                         <hr>
 
-                        <div class="hide" id="num14">
+                        <div>
+                            <h1>A Word on Dependencies</h1>
+                        </div>
+
+                        <hr>
+
+                        <div>
                             <h1>Examples</h1>
                         </div>
 
                         <hr>
 
-
-                        <div class="hide" id="num15">
-                            <img src="images/klee_viaducts.jpg" alt="Paul Klee: Revolt of the Viaducts"/>
-                            <h5>Paul Klee: Revolt of the Viaducts</h5>
-                        </div>
-
-                        <hr>
-
-                        <div class="hide" id="num16">
-                            <img src="images/klee_rhythm.jpg" alt="Paul Klee: Rhythmical Severer and Freer"/>
-                            <h5>Paul Klee: Rhythmical Severer and Freer</h5>
-                        </div>
-
-                        <hr>
-
-                        <div class="hide" id="num17">
-                            <img src="images/klee_separation.jpg" alt="Paul Klee: Separation in the Evening"/>
-                            <h5>Paul Klee: Separation in the Evening</h5>
-                        </div>
-
-                        <hr>
 
             </td></tr></table>
             <div id="gutter"></div>
@@ -177,18 +181,21 @@
         function $(id) { return document.getElementById(id); }
         h = window.innerHeight-40;
         $('viewport').style.height = h+"px";
-        var current = 1;
+        var current = 0;
         var tbl = document.getElementsByTagName('table')[0];
-        var number_of_slides = tbl.getElementsByTagName('div').length;
+        var slides = tbl.getElementsByTagName('div');
+        var number_of_slides = slides.length;
         function indicate(current) {
+			num = current+1;
             var gutter = $('gutter')
-            gutter.innerHTML = current+' of '+number_of_slides;
+            gutter.innerHTML = num+' of '+number_of_slides;
         }
         indicate(current);
+		slides[current].className = 'show';
         document.onkeyup = function(e) {
-            var curr_slide = $('num'+current);
+            var curr_slide = slides[current];
             if (curr_slide) {
-                curr_slide.className = 'hide';
+                curr_slide.className = '';
             }
             var code = e.keyCode;
             //space or right arrow or return
@@ -205,13 +212,13 @@
             }
             //jump to number
             if (code > 48 && code < 58) {
-                current = code - 48;
+                current = code - 49;
             }
-            if (current < 1) { current = 1; }
-            if (current > number_of_slides) { current = number_of_slides; }
-            var next_slide = $('num'+current);
+            if (current < 0) { current = 0; }
+            if (current + 1 > number_of_slides) { current = number_of_slides-1; }
+            var next_slide = slides[current];
             if (next_slide) {
-                next_slide.className = '';
+                next_slide.className = 'show';
             }
             indicate(current);
         }
